@@ -9,7 +9,10 @@
                 "$ld65-unresolved",
                 "$ld65-config"
             ],
-            "group": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "label": "ca65: Build without config"
         }
     ]
