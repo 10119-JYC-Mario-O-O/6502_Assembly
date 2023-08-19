@@ -50,6 +50,7 @@ clear_memory:
   bne clear_memory
 
 ;; second wait for vblank, PPU is ready after this
+
 vblankwait2:
   bit $2002
   bpl vblankwait2
@@ -142,12 +143,12 @@ palettes:
   .byte %11000000
   .byte $00, $00, $00, $00, $00, $00, $00, $00
 
-  .byte %11111111	; F (03)
+  .byte %00011000	; ㅗ (03)
+  .byte %00011000
+  .byte %00011000
+  .byte %00011000
+  .byte %00011000
+  .byte %00011000
   .byte %11111111
-  .byte %11000000
-  .byte %11000000
   .byte %11111111
-  .byte %11111111
-  .byte %11000000
-  .byte %11000000
   .byte $00, $00, $00, $00, $00, $00, $00, $00
